@@ -1,3 +1,4 @@
+import 'package:baskteer/business%20logic/meta_mask_provider.dart';
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
@@ -8,17 +9,24 @@ part 'login_bloc.freezed.dart';
 
 @injectable
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
-  LoginBloc() : super(_Initial()) {
+  LoginBloc(
+    this._metaMaskProvider,
+  ) : super(const _InitialLoginState()) {
     on<LoginEvent>((event, emit) => event.map(
           started: (_) => _onStarted(),
-          didTap: (_) => _didTap(emit),
+          didTapConnectWallet: (_) => _didTapConnectWallet(emit),
         ));
   }
 
+  final MetaMaskProvider _metaMaskProvider;
+
   void _onStarted() {}
 
-  void _didTap(Emitter<LoginState> emitter) {
-    emitter(LoginState.initial());
-    emitter(LoginState.newColor());
+  void _didTapConnectWallet(Emitter<LoginState> emit) async {
+    emit(const LoginState.connecting());
+    await _metaMaskProvider.connect();
+    if (_metaMaskProvider.isConnected) {
+      emit(const LoginState.connected());
+    }
   }
 }
