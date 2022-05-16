@@ -9,8 +9,16 @@ part 'login_bloc.freezed.dart';
 @injectable
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   LoginBloc() : super(_Initial()) {
-    on<LoginEvent>((event, emit) {
-      // TODO: implement event handler
-    });
+    on<LoginEvent>((event, emit) => event.map(
+          started: (_) => _onStarted(),
+          didTap: (_) => _didTap(emit),
+        ));
+  }
+
+  void _onStarted() {}
+
+  void _didTap(Emitter<LoginState> emitter) {
+    emitter(LoginState.initial());
+    emitter(LoginState.newColor());
   }
 }

@@ -6,14 +6,13 @@ class SplashPage extends StatelessWidget {
   const SplashPage({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) =>  
-  Scaffold(
+  Widget build(BuildContext context) => Scaffold(
       appBar: AppBar(
         title: const Text("Splash"),
       ),
       body: Center(
           child: ElevatedButton(
-        onPressed: () => context.router.push(const HomeRoute()),
+        onPressed: () => context.router.push(const LoginRoute()),
         child: const Text("Login"),
       )));
 }
