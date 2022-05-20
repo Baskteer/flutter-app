@@ -5,8 +5,8 @@ import 'package:baskteer/presentation/splash_page.dart';
 
 @MaterialAutoRouter(
   routes: [
-    MaterialRoute(page: SplashPage, initial: true),
-    MaterialRoute(page: HomePage),
+    MaterialRoute(page: SplashPage),
+    MaterialRoute(page: HomePage, initial: true),
     MaterialRoute(page: LoginPage),
   ],
   replaceInRouteName: 'Page,Route',
