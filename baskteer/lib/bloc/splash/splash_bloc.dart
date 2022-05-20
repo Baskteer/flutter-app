@@ -9,10 +9,13 @@ part 'splash_bloc.freezed.dart';
 @injectable
 class SplashBloc extends Bloc<SplashEvent, SplashState> {
   SplashBloc() : super(const _InitialSplashState()) {
-    on<SplashEvent>((event, emit) => event.map(started: (e) => _onStarted()));
+    on<SplashEvent>(
+        (event, emit) => event.map(started: (e) => _onStarted(emit)));
+    add(const SplashEvent.started());
   }
 
-  void _onStarted() {
-    print("YOYO");
+  void _onStarted(Emitter<SplashState> emit) async {
+    await Future.delayed(const Duration(seconds: 2));
+    emit(const SplashState.loaded());
   }
 }

@@ -8,7 +8,7 @@ part 'home_bloc.freezed.dart';
 
 @injectable
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
-  HomeBloc() : super(_Initial()) {
+  HomeBloc() : super(const _InitialHomeState()) {
     on<HomeEvent>((event, emit) {
       // TODO: implement event handler
     });

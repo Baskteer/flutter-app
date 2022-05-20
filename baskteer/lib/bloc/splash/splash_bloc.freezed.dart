@@ -34,17 +34,17 @@ mixin _$SplashEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_StartedSplashEvent value) started,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_StartedSplashEvent value)? started,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_StartedSplashEvent value)? started,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -67,26 +67,28 @@ class _$SplashEventCopyWithImpl<$Res> implements $SplashEventCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_StartedCopyWith<$Res> {
-  factory _$$_StartedCopyWith(
-          _$_Started value, $Res Function(_$_Started) then) =
-      __$$_StartedCopyWithImpl<$Res>;
+abstract class _$$_StartedSplashEventCopyWith<$Res> {
+  factory _$$_StartedSplashEventCopyWith(_$_StartedSplashEvent value,
+          $Res Function(_$_StartedSplashEvent) then) =
+      __$$_StartedSplashEventCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_StartedCopyWithImpl<$Res> extends _$SplashEventCopyWithImpl<$Res>
-    implements _$$_StartedCopyWith<$Res> {
-  __$$_StartedCopyWithImpl(_$_Started _value, $Res Function(_$_Started) _then)
-      : super(_value, (v) => _then(v as _$_Started));
+class __$$_StartedSplashEventCopyWithImpl<$Res>
+    extends _$SplashEventCopyWithImpl<$Res>
+    implements _$$_StartedSplashEventCopyWith<$Res> {
+  __$$_StartedSplashEventCopyWithImpl(
+      _$_StartedSplashEvent _value, $Res Function(_$_StartedSplashEvent) _then)
+      : super(_value, (v) => _then(v as _$_StartedSplashEvent));
 
   @override
-  _$_Started get _value => super._value as _$_Started;
+  _$_StartedSplashEvent get _value => super._value as _$_StartedSplashEvent;
 }
 
 /// @nodoc
 
-class _$_Started implements _Started {
-  const _$_Started();
+class _$_StartedSplashEvent implements _StartedSplashEvent {
+  const _$_StartedSplashEvent();
 
   @override
   String toString() {
@@ -96,7 +98,7 @@ class _$_Started implements _Started {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Started);
+        (other.runtimeType == runtimeType && other is _$_StartedSplashEvent);
   }
 
   @override
@@ -133,7 +135,7 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_StartedSplashEvent value) started,
   }) {
     return started(this);
   }
@@ -141,7 +143,7 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_StartedSplashEvent value)? started,
   }) {
     return started?.call(this);
   }
@@ -149,7 +151,7 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_StartedSplashEvent value)? started,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -159,8 +161,8 @@ class _$_Started implements _Started {
   }
 }
 
-abstract class _Started implements SplashEvent {
-  const factory _Started() = _$_Started;
+abstract class _StartedSplashEvent implements SplashEvent {
+  const factory _StartedSplashEvent() = _$_StartedSplashEvent;
 }
 
 /// @nodoc

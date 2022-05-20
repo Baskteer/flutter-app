@@ -15,7 +15,7 @@ import 'package:flutter/material.dart' as _i5;
 
 import '../home_page.dart' as _i2;
 import '../login_page.dart' as _i3;
-import '../splash_screen.dart' as _i1;
+import '../splash_page.dart' as _i1;
 
 class AppRouter extends _i4.RootStackRouter {
   AppRouter([_i5.GlobalKey<_i5.NavigatorState>? navigatorKey])
@@ -39,16 +39,16 @@ class AppRouter extends _i4.RootStackRouter {
 
   @override
   List<_i4.RouteConfig> get routes => [
-        _i4.RouteConfig(SplashRoute.name, path: '/splash-page'),
+        _i4.RouteConfig(SplashRoute.name, path: '/'),
         _i4.RouteConfig(HomeRoute.name, path: '/home-page'),
-        _i4.RouteConfig(LoginRoute.name, path: '/')
+        _i4.RouteConfig(LoginRoute.name, path: '/login-page')
       ];
 }
 
 /// generated route for
 /// [_i1.SplashPage]
 class SplashRoute extends _i4.PageRouteInfo<void> {
-  const SplashRoute() : super(SplashRoute.name, path: '/splash-page');
+  const SplashRoute() : super(SplashRoute.name, path: '/');
 
   static const String name = 'SplashRoute';
 }
@@ -64,7 +64,7 @@ class HomeRoute extends _i4.PageRouteInfo<void> {
 /// generated route for
 /// [_i3.LoginPage]
 class LoginRoute extends _i4.PageRouteInfo<void> {
-  const LoginRoute() : super(LoginRoute.name, path: '/');
+  const LoginRoute() : super(LoginRoute.name, path: '/login-page');
 
   static const String name = 'LoginRoute';
 }

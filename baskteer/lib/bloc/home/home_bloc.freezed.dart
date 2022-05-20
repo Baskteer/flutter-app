@@ -19,32 +19,38 @@ mixin _$HomeEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() investButtonTapped,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? investButtonTapped,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? investButtonTapped,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_InvestButtonTapped value) investButtonTapped,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_InvestButtonTapped value)? investButtonTapped,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_InvestButtonTapped value)? investButtonTapped,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -105,6 +111,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
+    required TResult Function() investButtonTapped,
   }) {
     return started();
   }
@@ -113,6 +120,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? investButtonTapped,
   }) {
     return started?.call();
   }
@@ -121,6 +129,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
+    TResult Function()? investButtonTapped,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -133,6 +142,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
+    required TResult Function(_InvestButtonTapped value) investButtonTapped,
   }) {
     return started(this);
   }
@@ -141,6 +151,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_InvestButtonTapped value)? investButtonTapped,
   }) {
     return started?.call(this);
   }
@@ -149,6 +160,7 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
+    TResult Function(_InvestButtonTapped value)? investButtonTapped,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -163,36 +175,153 @@ abstract class _Started implements HomeEvent {
 }
 
 /// @nodoc
+abstract class _$$_InvestButtonTappedCopyWith<$Res> {
+  factory _$$_InvestButtonTappedCopyWith(_$_InvestButtonTapped value,
+          $Res Function(_$_InvestButtonTapped) then) =
+      __$$_InvestButtonTappedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_InvestButtonTappedCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res>
+    implements _$$_InvestButtonTappedCopyWith<$Res> {
+  __$$_InvestButtonTappedCopyWithImpl(
+      _$_InvestButtonTapped _value, $Res Function(_$_InvestButtonTapped) _then)
+      : super(_value, (v) => _then(v as _$_InvestButtonTapped));
+
+  @override
+  _$_InvestButtonTapped get _value => super._value as _$_InvestButtonTapped;
+}
+
+/// @nodoc
+
+class _$_InvestButtonTapped implements _InvestButtonTapped {
+  const _$_InvestButtonTapped();
+
+  @override
+  String toString() {
+    return 'HomeEvent.investButtonTapped()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_InvestButtonTapped);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() investButtonTapped,
+  }) {
+    return investButtonTapped();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? investButtonTapped,
+  }) {
+    return investButtonTapped?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? investButtonTapped,
+    required TResult orElse(),
+  }) {
+    if (investButtonTapped != null) {
+      return investButtonTapped();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_InvestButtonTapped value) investButtonTapped,
+  }) {
+    return investButtonTapped(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_InvestButtonTapped value)? investButtonTapped,
+  }) {
+    return investButtonTapped?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_InvestButtonTapped value)? investButtonTapped,
+    required TResult orElse(),
+  }) {
+    if (investButtonTapped != null) {
+      return investButtonTapped(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _InvestButtonTapped implements HomeEvent {
+  const factory _InvestButtonTapped() = _$_InvestButtonTapped;
+}
+
+/// @nodoc
 mixin _$HomeState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? loaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
+    required TResult Function(_InitialHomeState value) initial,
+    required TResult Function(_LoadingHomeState value) loading,
+    required TResult Function(_LoadedHomeState value) loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
+    TResult Function(_InitialHomeState value)? initial,
+    TResult Function(_LoadingHomeState value)? loading,
+    TResult Function(_LoadedHomeState value)? loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
+    TResult Function(_InitialHomeState value)? initial,
+    TResult Function(_LoadingHomeState value)? loading,
+    TResult Function(_LoadedHomeState value)? loaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -214,26 +343,28 @@ class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_InitialCopyWith<$Res> {
-  factory _$$_InitialCopyWith(
-          _$_Initial value, $Res Function(_$_Initial) then) =
-      __$$_InitialCopyWithImpl<$Res>;
+abstract class _$$_InitialHomeStateCopyWith<$Res> {
+  factory _$$_InitialHomeStateCopyWith(
+          _$_InitialHomeState value, $Res Function(_$_InitialHomeState) then) =
+      __$$_InitialHomeStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_InitialCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
-    implements _$$_InitialCopyWith<$Res> {
-  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
-      : super(_value, (v) => _then(v as _$_Initial));
+class __$$_InitialHomeStateCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res>
+    implements _$$_InitialHomeStateCopyWith<$Res> {
+  __$$_InitialHomeStateCopyWithImpl(
+      _$_InitialHomeState _value, $Res Function(_$_InitialHomeState) _then)
+      : super(_value, (v) => _then(v as _$_InitialHomeState));
 
   @override
-  _$_Initial get _value => super._value as _$_Initial;
+  _$_InitialHomeState get _value => super._value as _$_InitialHomeState;
 }
 
 /// @nodoc
 
-class _$_Initial implements _Initial {
-  const _$_Initial();
+class _$_InitialHomeState implements _InitialHomeState {
+  const _$_InitialHomeState();
 
   @override
   String toString() {
@@ -243,7 +374,7 @@ class _$_Initial implements _Initial {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Initial);
+        (other.runtimeType == runtimeType && other is _$_InitialHomeState);
   }
 
   @override
@@ -253,6 +384,8 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() loaded,
   }) {
     return initial();
   }
@@ -261,6 +394,8 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? loaded,
   }) {
     return initial?.call();
   }
@@ -269,6 +404,8 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? loaded,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -280,7 +417,9 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
+    required TResult Function(_InitialHomeState value) initial,
+    required TResult Function(_LoadingHomeState value) loading,
+    required TResult Function(_LoadedHomeState value) loaded,
   }) {
     return initial(this);
   }
@@ -288,7 +427,9 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
+    TResult Function(_InitialHomeState value)? initial,
+    TResult Function(_LoadingHomeState value)? loading,
+    TResult Function(_LoadedHomeState value)? loaded,
   }) {
     return initial?.call(this);
   }
@@ -296,7 +437,9 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
+    TResult Function(_InitialHomeState value)? initial,
+    TResult Function(_LoadingHomeState value)? loading,
+    TResult Function(_LoadedHomeState value)? loaded,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -306,6 +449,228 @@ class _$_Initial implements _Initial {
   }
 }
 
-abstract class _Initial implements HomeState {
-  const factory _Initial() = _$_Initial;
+abstract class _InitialHomeState implements HomeState {
+  const factory _InitialHomeState() = _$_InitialHomeState;
+}
+
+/// @nodoc
+abstract class _$$_LoadingHomeStateCopyWith<$Res> {
+  factory _$$_LoadingHomeStateCopyWith(
+          _$_LoadingHomeState value, $Res Function(_$_LoadingHomeState) then) =
+      __$$_LoadingHomeStateCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_LoadingHomeStateCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res>
+    implements _$$_LoadingHomeStateCopyWith<$Res> {
+  __$$_LoadingHomeStateCopyWithImpl(
+      _$_LoadingHomeState _value, $Res Function(_$_LoadingHomeState) _then)
+      : super(_value, (v) => _then(v as _$_LoadingHomeState));
+
+  @override
+  _$_LoadingHomeState get _value => super._value as _$_LoadingHomeState;
+}
+
+/// @nodoc
+
+class _$_LoadingHomeState implements _LoadingHomeState {
+  const _$_LoadingHomeState();
+
+  @override
+  String toString() {
+    return 'HomeState.loading()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_LoadingHomeState);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() loaded,
+  }) {
+    return loading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? loaded,
+  }) {
+    return loading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? loaded,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitialHomeState value) initial,
+    required TResult Function(_LoadingHomeState value) loading,
+    required TResult Function(_LoadedHomeState value) loaded,
+  }) {
+    return loading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_InitialHomeState value)? initial,
+    TResult Function(_LoadingHomeState value)? loading,
+    TResult Function(_LoadedHomeState value)? loaded,
+  }) {
+    return loading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitialHomeState value)? initial,
+    TResult Function(_LoadingHomeState value)? loading,
+    TResult Function(_LoadedHomeState value)? loaded,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadingHomeState implements HomeState {
+  const factory _LoadingHomeState() = _$_LoadingHomeState;
+}
+
+/// @nodoc
+abstract class _$$_LoadedHomeStateCopyWith<$Res> {
+  factory _$$_LoadedHomeStateCopyWith(
+          _$_LoadedHomeState value, $Res Function(_$_LoadedHomeState) then) =
+      __$$_LoadedHomeStateCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_LoadedHomeStateCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res>
+    implements _$$_LoadedHomeStateCopyWith<$Res> {
+  __$$_LoadedHomeStateCopyWithImpl(
+      _$_LoadedHomeState _value, $Res Function(_$_LoadedHomeState) _then)
+      : super(_value, (v) => _then(v as _$_LoadedHomeState));
+
+  @override
+  _$_LoadedHomeState get _value => super._value as _$_LoadedHomeState;
+}
+
+/// @nodoc
+
+class _$_LoadedHomeState implements _LoadedHomeState {
+  const _$_LoadedHomeState();
+
+  @override
+  String toString() {
+    return 'HomeState.loaded()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_LoadedHomeState);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() loaded,
+  }) {
+    return loaded();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? loaded,
+  }) {
+    return loaded?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? loaded,
+    required TResult orElse(),
+  }) {
+    if (loaded != null) {
+      return loaded();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitialHomeState value) initial,
+    required TResult Function(_LoadingHomeState value) loading,
+    required TResult Function(_LoadedHomeState value) loaded,
+  }) {
+    return loaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_InitialHomeState value)? initial,
+    TResult Function(_LoadingHomeState value)? loading,
+    TResult Function(_LoadedHomeState value)? loaded,
+  }) {
+    return loaded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitialHomeState value)? initial,
+    TResult Function(_LoadingHomeState value)? loading,
+    TResult Function(_LoadedHomeState value)? loaded,
+    required TResult orElse(),
+  }) {
+    if (loaded != null) {
+      return loaded(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadedHomeState implements HomeState {
+  const factory _LoadedHomeState() = _$_LoadedHomeState;
 }
