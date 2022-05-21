@@ -1,3 +1,6 @@
+import 'package:baskteer/presentation/invest_page.dart';
+import 'package:baskteer/presentation/portfolio_page.dart';
+import 'package:baskteer/presentation/settings_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -17,6 +20,11 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: const Color(0xff405FFF),
           title: const Text('BottomNavigationBar Demo'),
         ),
+        body: [
+          const InvestPage(),
+          const PortfolioPage(),
+          const SettingsPage()
+        ][_selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
           unselectedItemColor: const Color(0xffD2D2D2),
           selectedItemColor: const Color(0xff405FFF),
