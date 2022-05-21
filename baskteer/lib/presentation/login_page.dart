@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:baskteer/bloc/login/login_bloc.dart';
 import 'package:baskteer/di/dependencies.dart';
+import 'package:baskteer/extensions/custom_colors.dart';
 import 'package:baskteer/presentation/routes/app_router.gr.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -148,7 +149,7 @@ class _MetaMaskButton extends StatelessWidget {
         "Connect with metamask",
         style: TextStyle(
           fontSize: 20,
-          color: Color(0xff405FFF),
+          color: mainBlue,
           fontFamily: 'SFPro',
           fontWeight: FontWeight.bold,
         ),
@@ -185,7 +186,7 @@ class _CoinBaseButton extends StatelessWidget {
         "Connect with coinbase",
         style: TextStyle(
           fontSize: 20,
-          color: Color(0xff405FFF),
+          color: mainBlue,
           fontFamily: 'SFPro',
           fontWeight: FontWeight.bold,
         ),

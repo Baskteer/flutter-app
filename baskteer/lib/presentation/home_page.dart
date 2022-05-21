@@ -1,3 +1,4 @@
+import 'package:baskteer/extensions/custom_colors.dart';
 import 'package:baskteer/presentation/invest_page.dart';
 import 'package:baskteer/presentation/portfolio_page.dart';
 import 'package:baskteer/presentation/settings_page.dart';
@@ -17,8 +18,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          backgroundColor: const Color(0xff405FFF),
-          title: const Text('BottomNavigationBar Demo'),
+          backgroundColor: mainBlue,
+          title: const Text('BASKTEER'),
         ),
         body: [
           InvestPage(),
@@ -26,8 +27,8 @@ class _HomePageState extends State<HomePage> {
           SettingsPage(),
         ][_selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
-          unselectedItemColor: const Color(0xffD2D2D2),
-          selectedItemColor: const Color(0xff405FFF),
+          unselectedItemColor: mainGrey,
+          selectedItemColor: mainBlue,
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
           items: <BottomNavigationBarItem>[
@@ -37,7 +38,7 @@ class _HomePageState extends State<HomePage> {
                 child: SvgPicture.asset(
                   'lib/assets/images/invest.svg',
                   height: 30,
-                  color: const Color(0xffD2D2D2),
+                  color: mainGrey,
                 ),
               ),
               activeIcon: Padding(
@@ -45,7 +46,7 @@ class _HomePageState extends State<HomePage> {
                 child: SvgPicture.asset(
                   'lib/assets/images/invest.svg',
                   height: 30,
-                  color: const Color(0xff405FFF),
+                  color: mainBlue,
                 ),
               ),
               label: 'Invest',
@@ -56,7 +57,7 @@ class _HomePageState extends State<HomePage> {
                 child: SvgPicture.asset(
                   'lib/assets/images/portfolio.svg',
                   height: 30,
-                  color: const Color(0xffD2D2D2),
+                  color: mainGrey,
                 ),
               ),
               activeIcon: Padding(
@@ -64,7 +65,7 @@ class _HomePageState extends State<HomePage> {
                 child: SvgPicture.asset(
                   'lib/assets/images/portfolio.svg',
                   height: 30,
-                  color: const Color(0xff405FFF),
+                  color: mainBlue,
                 ),
               ),
               label: 'Portfolio',
@@ -75,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                 child: SvgPicture.asset(
                   'lib/assets/images/settings.svg',
                   height: 30,
-                  color: const Color(0xffD2D2D2),
+                  color: mainGrey,
                 ),
               ),
               activeIcon: Padding(
@@ -83,7 +84,7 @@ class _HomePageState extends State<HomePage> {
                 child: SvgPicture.asset(
                   'lib/assets/images/settings.svg',
                   height: 30,
-                  color: const Color(0xff405FFF),
+                  color: mainBlue,
                 ),
               ),
               label: 'Settings',
