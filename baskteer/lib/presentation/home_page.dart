@@ -21,9 +21,9 @@ class _HomePageState extends State<HomePage> {
           title: const Text('BottomNavigationBar Demo'),
         ),
         body: [
-          const InvestPage(),
+          InvestPage(),
           const PortfolioPage(),
-          const SettingsPage()
+          SettingsPage(),
         ][_selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
           unselectedItemColor: const Color(0xffD2D2D2),
