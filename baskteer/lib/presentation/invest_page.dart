@@ -1,4 +1,6 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:baskteer/extensions/custom_colors.dart';
+import 'package:baskteer/presentation/routes/app_router.gr.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -71,6 +73,7 @@ class _Cell extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      onTap: () => context.router.push(const TransactionRoute()),
       leading: FractionallySizedBox(
           heightFactor: 0.6, widthFactor: 0.3, child: _CoinStack(item.coins)),
       title: Center(

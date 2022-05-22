@@ -24,6 +24,25 @@ class MetaMaskProvider extends ChangeNotifier {
     }
   }
 
+  Future<void> buy() async {
+    const TOTAL_AMOUNT = 2000;
+    const abiERC20 =
+        "function approve(address _spender, uint256 _value) public returns (bool success)";
+    const abi = "function buy(uint256 amount)";
+    const WETH = "0xc778417E063141139Fce010982780140Aa0cD5Ab";
+    const deployedContractAddress =
+        "0x7144476083c8dAf668e4163f063cCa86a87E387B";
+    final abiERC20contract = Contract(WETH, abiERC20, provider!);
+    final x = await abiERC20contract.call<dynamic>('approve', [
+      deployedContractAddress,
+      TOTAL_AMOUNT * 1.02,
+    ]);
+    print("dupa: ${x}");
+
+    final contract = Contract(deployedContractAddress, abi, provider!);
+    await contract.call<void>('buy', [TOTAL_AMOUNT]);
+  }
+
   clear() {
     currentAddress = '';
     currentChain = -1;
