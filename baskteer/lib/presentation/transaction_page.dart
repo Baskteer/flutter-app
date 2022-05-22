@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
+import '../business logic/meta_mask_provider.dart';
 import 'invest_page.dart';
 
 @injectable
@@ -173,9 +174,9 @@ class _ConfirmButton extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        onPressed: () {
+        onPressed: () async {
           context.router.push(const ConfirmationRoute());
-          // await MetaMaskProvider().buy();
+          await MetaMaskProvider().buy();
         });
   }
 }

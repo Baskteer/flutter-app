@@ -24,7 +24,7 @@ class InvestPage extends StatelessWidget {
       child: Column(
         children: [
           const Padding(
-            padding: EdgeInsets.only(top: 10, left: 30, right: 30),
+            padding: EdgeInsets.only(top: 30, left: 30, right: 30),
             child: Text(
               "Start your invsting journey by selecting a fund from the list below",
               style: TextStyle(

@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
         ),
         body: [
           InvestPage(),
-          const PortfolioPage(),
+          PortfolioPage(),
           SettingsPage(),
         ][_selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
